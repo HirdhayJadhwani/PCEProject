@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer with Us - Disaster Relief & Resource Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Volunteer with Us</h1>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> Disaster Alerts</a></li>
+                <li><a href="resources.html"><i class="fas fa-map-marker-alt"></i> Find Resources</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Emergency Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Volunteer Information Section -->
+        <section id="volunteer-info">
+            <h2>Why Volunteer?</h2>
+            <p>Join our mission to provide timely and effective disaster relief. As a volunteer, you'll have the opportunity to make a real impact in communities affected by natural disasters.</p>
+            <ul>
+                <li>Help distribute relief supplies</li>
+                <li>Provide assistance at medical camps</li>
+                <li>Support local communities with rebuilding efforts</li>
+            </ul>
+        </section>
+
+        <section id="volunteer-form">
+            <h2>Volunteer Registration</h2>
+            <p>Fill out the form below to join our team of volunteers.</p>
+            <form id="volunteerRegistrationForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+        
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+        
+                <label for="skills">Skills / Areas of Expertise:</label>
+                <textarea id="skills" name="skills" rows="4" placeholder="E.g., First Aid, Logistics, Communication"></textarea>
+        
+                <button type="submit" class="cta-button">Register as a Volunteer</button>
+            </form>
+            <p id="formMessage" style="color: green; display: none;">Thank you for registering as a volunteer!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Disaster Relief & Resource Finder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle the mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('nav ul.nav-list');
+    
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    
+        // Handle form submission
+        const volunteerForm = document.getElementById('volunteerRegistrationForm');
+        const formMessage = document.getElementById('formMessage');
+    
+        volunteerForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent the default form submission
+            formMessage.style.display = 'block'; // Show the confirmation message
+            volunteerForm.reset(); // Clear the form fields
+        });
+    </script>
+</body>
+</html>
