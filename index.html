@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Relief & Resource Finder - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Relief & Resource Finder</h1>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> Disaster Alerts</a></li>
+                <li><a href="resources.html"><i class="fas fa-map-marker-alt"></i> Find Resources</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Emergency Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the Disaster Relief & Resource Finder</h2>
+            <p>Your one-stop solution for finding emergency shelters, medical aid, and relief resources during a disaster.</p>
+            <div class="media-gallery">
+                <img src="images/achievement1.jpg" alt="Relief work in progress" class="gallery-image">
+                <img src="images/achievement2.jpg" alt="Volunteers helping during disaster" class="gallery-image">
+                <img src="images/achievement3.jpg" alt="Donations being collected" class="gallery-image">
+            </div>
+        </section>
+
+        <!-- Impact Counters Section -->
+        <section id="impact">
+            <h2>Our Impact</h2>
+            <div class="counter">
+                <p><strong>10,000+</strong></p>
+                <p>People Helped</p>
+            </div>
+            <div class="counter">
+                <p><strong>1,500+</strong></p>
+                <p>Volunteers</p>
+            </div>
+            <div class="counter">
+                <p><strong>50+</strong></p>
+                <p>Relief Operations</p>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Banner -->
+        <section id="call-to-action">
+            <h2>Join Our Efforts</h2>
+            <p>Volunteer, donate, or get involved in our upcoming relief events to make a difference.</p>
+            <a href="volunteer.html" class="cta-button">Get Involved</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Disaster Relief & Resource Finder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle the mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('nav ul.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
